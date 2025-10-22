@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>FormulárioP</title>
+   <style>
+          body {
+               background-color: #f8c8dc;
+               font-family: Arial, sans-serif;
+               text-align: center;
+               margin: 0;
+               padding: 0;
+          }
+
+          h2 {
+               margin-top: 30px;
+               color: #2ce044d5;
+          }
+
+          form {
+               background-color: #fff;
+               max-width: 400px;
+               margin: 30px auto;
+               padding: 20px;
+               border-radius: 10px;
+               box-shadow: 0 0 10px rgba(69, 180, 69, 0.2);
+          }
+
+          label {
+               display: block;
+               text-align: left;
+               margin-bottom: 5px;
+               font-weight: bold;
+               color: #333;
+          }
+
+          input[type="text"],
+          input[type="number"],
+          input[type="email"] {
+               width: 100%;
+               padding: 10px;
+               margin-bottom: 15px;
+               border: 1px solid #ccc;
+               border-radius: 5px;
+               box-sizing: border-box;
+          }
+
+          input[type="radio"] {
+               margin-right: 5px;
+          }
+
+          input[type="submit"] {
+               background-color: #572dc9ff;
+               color: white;
+               border: none;
+               padding: 10px 20px;
+               font-size: 16px;
+               border-radius: 5px;
+               cursor: pointer;
+               transition: background-color 0.3s ease;
+          }
+
+          input[type="submit"]:hover {
+               background-color: #597c6dff;
+          }
+
+          h3 {
+               color: #0f2fc0ff;
+          }
+
+          .resultado {
+               background-color: #fff;
+               max-width: 400px;
+               margin: 20px auto;
+               padding: 15px;
+               border-radius: 10px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+               text-align: left;
+               color: #444;
+          }
+     </style>
+
+</head>
+<body>
+     <h2>Formulário  De Cadastro Produto 🛒</h2>
+     <form action="estoque.php?campanha=blackfriday&versao=2.0" method="post">
+     <label>Nome do Produto:</label><br>
+     <input type="none" name="nome" required><br><br>
+     <label>Categoria:</label><br>
+      <input type="catego" name="categoria" required><br><br>
+      <label>Preço:</label><br>
+      <input type="pre" name="preço" required><br><br>
+      <label>Quantidade em Estoque</label>
+      <input type="etq" name="estoque" required><br><br>
+     <input type="submit" value="Enviar Informações">
+  
+     </form>
+    
+     
+</body>
+</html>

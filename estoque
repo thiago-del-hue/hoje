@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+      <style>
+          body {
+               background-color: #668aadff;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               margin: 0;
+               padding: 20px;
+          }
+          .resultado {
+               background-color: white;
+               padding: 20px 30px;
+               border-radius: 12px;
+               box-shadow: 0 4px 15px rgba(24, 37, 97, 0.1);
+               max-width: 400px;
+               width: 100%;
+               color: #333;
+          }
+          .resultado h2 {
+               color: #4a90e2;
+               margin-bottom: 15px;
+          }
+          .resultado p {
+               font-size: 1.1em;
+               margin: 8px 0;
+          }
+     </style>
+</head>
+<body>
+      <?php
+     if ($_SERVER["REQUEST_METHOD"]== "POST"){
+          $NomeProduto= $_POST["nome"];
+          $CategoriaProduto= $_POST["categoria"];
+          $PreçoProduto= $_POST["preço"];
+          $QuantidadeProduto= $_POST["estoque"];
+     
+     if(isset($_GET['campanha'])&& isset($_GET['versao'])){
+          $campanha=$_GET['campanha'];
+          $versao=$_GET['versao'];
+     }
+ echo "Nome: $NomeProduto<br>";
+echo "Categoria: $CategoriaProduto<br>";
+echo "Preço: $PreçoProduto<br>";
+echo "Quantidade em Estoque: $QuantidadeProduto<br>";
+     }
+     ?>
+</body>
+</html>

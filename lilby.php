@@ -98,14 +98,27 @@
         $TelCliente = $_POST["Numero"];
         $TipoAparelho = $_POST["Tipo"];
         $DataAtendimento = $_POST["Data"];
-        $DescriçãoProblema = $_POST["Descrição"];
-        echo "Nome: $nomeCliente<br>";
-        echo "Numero: $TelCliente<br>";
-        echo "Tipo: $TipoAparelho<br>";
-        echo "Data: $DataAtendimento<br>";
-        echo "Descriçao: $DescriçãoProblema<br>";
-    }
+        $DescricaoProblema = $_POST["Descrição"];
+        
+        $conn= new mysqli("localhost","root","aluno","assistencia","3307");
+        if($conn->connect_error) {
+            die("<p style='color:yellow;'>Falha na conexao com o banco de dados: " . $conn->connect_error . "</p>");
+        }
+        $sql="INSERT INTO agendamentos (Nome,Numero,Tipo,Data,Descrição)
+            VALUES('$nomeCliente','$TelCliente','$TipoAparelho','$DataAtendimento','$DescricaoProblema')";
+        if($conn->query($sql)===TRUE) {
+        echo "<p>Nome: $nomeCliente</p>";
+        echo "<p>Numero: $TelCliente</p>";
+        echo "<p>Tipo: $TipoAparelho</p>";
+        echo "<p>Data: $DataAtendimento</p>";
+        echo "<p>Descriçao: $DescricaoProblema</p>";
+        echo"<p style='color:green; font-weight:bold;'> ✅Agendamento realizado com sucesso no banco de Dados!</p><br>";
+        } else {
+            echo"<p style='color:red; font-weight:bold;'> ⚠️Erro ao realizar agendamento: " . $conn->error . "</p>";
+        }
+        $conn->close();
 
+    }
     ?>
     <a href="agora.php"> Voltar</a>
 </body>

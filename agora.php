@@ -109,16 +109,7 @@
         <input type="text" name="Descrição" required><br><br>
         <input type="submit" value="Enviar">
     </form>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nomeCliente = $_POST["Nome"];
-        $TelCliente = $_POST["Numero"];
-        $TipoAparelho = $_POST["Tipo"];
-        $DataAtendimento = $_POST["Data"];
-        $DescriçãoProblema = $_POST["Descrição"];
-    }
-    ?>
-
+   
 </body>
 
-</html>
+</html>]
